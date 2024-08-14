@@ -2,8 +2,8 @@ import React from 'react';
 
 const WhatsAppIcon = () => {
   return (
-    <a href="https://wa.me/919624073799" className="back-to-top d-flex align-items-center justify-content-center">
-      <svg xmlns="http://www.w3.org/2000/svg" width="256" height="258" viewBox="0 0 256 258">
+    <a href="https://wa.me/918980038803" className="fixed z-40 bottom-8 right-8">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 258">
         <defs>
           <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
             <stop offset="0%" stopColor="#1FAF38" />

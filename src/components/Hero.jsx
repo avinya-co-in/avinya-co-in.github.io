@@ -2,40 +2,36 @@ import React from "react";
 
 function Hero() {
   return (
-    <section id="hero" className="d-flex align-items-center">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 pt-2 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1>
-              Welcome to
-              <b>Avinya</b>
+    <section id="hero" className="bg-white py-8 h-screen flex items-center">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col-reverse lg:flex-row items-center">
+          <div className="lg:w-1/2 pt-4 lg:pt-0 flex flex-col justify-center lg:text-left">
+            <h1 className="text-3xl lg:text-6xl font-bold">
+              Welcome to <span className="font-extrabold">Avinya</span>
             </h1>
-            <br />
-            <h1>
-              <i>Your Gateway to the Indian Market!</i>
+            <h1 className="text-xl lg:text-4xl italic mt-2">
+              Your Gateway to the Indian Market!
             </h1>
-            <ul>
-              <li>
-                <i className="ri-check-line"></i> Expert assistance for
-                international companies entering the Indian market
+            <ul className="mt-4 space-y-2 text-sm lg:text-lg">
+              <li className="flex items-center">
+                <img src="/assets/icon/blob1.svg" className="w-4 h-4 mr-2" />
+                Expert assistance for companies wishing to expand business&nbsp;<strong>Globally</strong>
               </li>
-              <li>
-                <i className="ri-check-line"></i> Comprehensive market analysis
-                and strategic planning
+              <li className="flex items-center">
+                <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
+                Comprehensive market analysis and strategic planning
               </li>
-              <li>
-                <i className="ri-check-line"></i> Cultural expertise to ensure
-                effective cross-border operations
+              <li className="flex items-center">
+                <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
+                Cultural expertise to ensure effective cross-border operations
               </li>
             </ul>
-            <div className="mt-3">
-              <a href="#contact" className="btn-get-started scrollto">
-                Get Started
-              </a>
+            <div className="mt-6">
+              <a href="#contact" className="bg-blue-600 text-white text-lg py-3 px-5 rounded-full hover:bg-blue-700 transition-colors duration-200 ml-4">Get Started</a>
             </div>
           </div>
-          <div className="col-lg-6 order-1 order-lg-2 hero-img">
-            <img src="assets/img/hero-img.png" className="img-fluid" alt="" />
+          <div className="lg:w-1/2 mb-6 lg:mb-0">
+            <img src="/assets/img/hero-img.png" className="w-full h-auto" alt="Hero Image" />
           </div>
         </div>
       </div>

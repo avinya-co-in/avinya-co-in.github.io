@@ -8,5 +8,5 @@ Official avinya.co.in website Hosting
 |07/08/2023     |Improve Language, Image, Address, Contact, UX                                                  |
 |12/08/2023     |Adding Links, Added New Page                                                                   |
 |16/04/2024     |Porting to vite + React                                                                        |
-
+|14/08/2024     |Adding Google Project IDX nix config to the project and improving                              |
 

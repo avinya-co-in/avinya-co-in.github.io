@@ -17,10 +17,12 @@ const Home = () => {
       <Navbar />
       <Hero />
       <main id="main">
-        <About />
-        <WhyUs />
+        {/* <div className="h-screen"> */}
+          <About />
+          <WhyUs />
+        {/* </div> */}
         <Services />
-        <Features />
+        {/* <Features /> */}
         <FAQs />
         <Contact />
       </main>
