@@ -43,7 +43,7 @@ const FAQs = () => {
   };
 
   return (
-    <section id="faq" className="py-12 bg-white h-screen flex items-center">
+    <section id="faq" className="bg-white flex items-center">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">FAQs</h2>

@@ -18,17 +18,26 @@ const About = () => {
               communication. We are committed to ensuring your expansion into India is seamless and successful.
             </p>
             <ul className="text-base md:text-lg mb-4 space-y-2">
-              <li className="flex items-center">
-                <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
-                <strong>Proven Success:</strong>&nbsp;Expertly guiding international companies into the Indian market.
+              <li className="sm:flex sm:items-center">
+                <div className="flex items-center">
+                  <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
+                  <b>Proven Success:&nbsp;</b>
+                </div>
+                <p>Expertly guiding international companies into the Indian market.</p>
               </li>
-              <li className="flex items-center">
-                <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
-                <strong>In-Depth Knowledge:</strong>&nbsp;Deep understanding of India’s business landscape and culture.
+              <li className="sm:flex sm:items-center">
+                <div className="flex items-center">
+                  <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
+                  <b>In-Depth Knowledge:&nbsp;</b>
+                </div>
+                Deep understanding of India’s business landscape and culture.
               </li>
-              <li className="flex items-center">
-                <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
-                <strong>Tailored Solutions:</strong>&nbsp;Customized strategies to meet your unique business needs.
+              <li className="sm:flex sm:items-center">
+                <div className="flex items-center">
+                  <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
+                  <b>Tailored Solutions:&nbsp;</b>
+                </div>
+                Customized strategies to meet your unique business needs.
               </li>
             </ul>
             <p className="italic text-base md:text-xl">

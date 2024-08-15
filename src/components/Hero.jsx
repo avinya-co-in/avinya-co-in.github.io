@@ -14,8 +14,8 @@ function Hero() {
             </h1>
             <ul className="mt-4 space-y-2 text-sm lg:text-lg">
               <li className="flex items-center">
-                <img src="/assets/icon/blob1.svg" className="w-4 h-4 mr-2" />
-                Expert assistance for companies wishing to expand business&nbsp;<strong>Globally</strong>
+                <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
+                Expert assistance for companies wishing to expand business&nbsp;<b>Globally</b>
               </li>
               <li className="flex items-center">
                 <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
