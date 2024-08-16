@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <a href="index.html" className="flex items-center">
-          <img src="/assets/img/logo.png" alt="Avinya" className="h-12 w-auto" />
+          <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
         </a>
 
         {/* Navigation */}

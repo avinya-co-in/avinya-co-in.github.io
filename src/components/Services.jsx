@@ -1,5 +1,3 @@
-import React from "react";
-
 const Services = () => {
   return (
     <section id="services" className="py-12 bg-white flex items-center">
@@ -14,7 +12,7 @@ const Services = () => {
 
         <div className="flex flex-col xl:flex-row gap-8">
           <div className="xl:w-5/12 flex justify-center">
-            <img src="assets/img/services.svg" className="max-w-full h-auto" alt="Services Illustration" />
+            <img src="/services.png" className="max-w-full h-auto" alt="Services Illustration" />
           </div>
           <div className="xl:w-7/12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

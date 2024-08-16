@@ -1,5 +1,3 @@
-import React from 'react';
-
 const WhatsAppIcon = () => {
   return (
     <a href="https://wa.me/918980038802" className="fixed z-40 bottom-8 right-8">

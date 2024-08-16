@@ -1,5 +1,3 @@
-import React from "react";
-
 function Hero() {
   return (
     <section id="hero" className="bg-white py-8 h-screen flex items-center">

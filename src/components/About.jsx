@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   return (
     <section id="about" className="about">
@@ -30,7 +28,7 @@ const About = () => {
                   <img src="/assets/icon/tick.svg" alt="Tick Icon" className="w-4 h-4 mr-2" />
                   <b>In-Depth Knowledge:&nbsp;</b>
                 </div>
-                Deep understanding of India’s business landscape and culture.
+                Deep understanding of India's business landscape and culture.
               </li>
               <li className="sm:flex sm:items-center">
                 <div className="flex items-center">
@@ -46,7 +44,7 @@ const About = () => {
           </div>
           <div className="mt-6 md:mt-0 md:ml-6">
             <img
-              src="/assets/img/logo.png"
+              src="/logo.png"
               className="w-full h-auto p-4"
               alt="Avinya Logo"
             />

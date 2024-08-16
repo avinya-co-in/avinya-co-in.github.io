@@ -1,5 +1,3 @@
-import React from "react";
-
 function WhyUs() {
   return (
     <section id="why-us" className="bg-white py-12">
