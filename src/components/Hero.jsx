@@ -13,7 +13,7 @@ function Hero() {
             <ul className="mt-4 space-y-2 text-sm lg:text-lg">
               <li className="flex items-center">
                 <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
-                Expert assistance for companies wishing to expand business&nbsp;<b>Globally</b>
+                Expert assistance for companies wishing to expand business&nbsp;<div className="font-black">Globally</div>
               </li>
               <li className="flex items-center">
                 <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
