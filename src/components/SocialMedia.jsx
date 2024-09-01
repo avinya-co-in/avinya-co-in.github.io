@@ -7,6 +7,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import CloseIcon from '@mui/icons-material/Close';
 
 const actions = [
   { index: 0, icon: <WhatsAppIcon />, name: 'WhatsApp', link: 'https://wa.me/918980038802', gradient:'linear-gradient(#25d366,#25d366) 14% 84%/16% 16%' },
@@ -16,11 +17,19 @@ const actions = [
 ];
 
 export default function SocialMedia() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <Box sx={{ position: 'fixed', bottom: 16, right: 16, height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="SpeedDial social media links"
         FabProps={{size: 'small'}}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        direction="up"
         sx={{
           position: 'absolute',
           bottom: 16,
@@ -33,7 +42,7 @@ export default function SocialMedia() {
             },
           },
         }}
-        icon={<WhatsAppIcon />}
+        icon={!open? <WhatsAppIcon /> : <CloseIcon/>}
       >
         {actions.map((action) => (
           <SpeedDialAction
