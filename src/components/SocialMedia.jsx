@@ -6,11 +6,13 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const actions = [
-  { index: 0, icon: <WhatsAppIcon />, name: 'WhatsApp', link: 'https://wa.me/918980038802' },
-  { index: 1, icon: <InstagramIcon />, name: 'Instagram', link: 'https://www.instagram.com/avinya-co-in' },
-  { index: 2, icon: <LinkedInIcon />, name: 'LinkedIn', link: 'https://www.linkedin.com/company/avinya-co-in' },
+  { index: 0, icon: <WhatsAppIcon />, name: 'WhatsApp', link: 'https://wa.me/918980038802', gradient:'linear-gradient(#25d366,#25d366) 14% 84%/16% 16%' },
+  { index: 1, icon: <InstagramIcon />, name: 'Instagram', link: 'https://www.instagram.com/avinya-co-in', gradient:'linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7)' },
+  { index: 2, icon: <LinkedInIcon />, name: 'LinkedIn', link: 'https://www.linkedin.com/company/avinya-co-in', gradient:'linear-gradient(308deg, rgba(2,0,36,1) 0%, rgba(114,114,221,1) 60%, rgba(5,177,245,1) 89%, rgba(0,212,255,1) 100%)' },
+  { index: 3, icon: <FacebookIcon />, name: 'FaceBook', link: 'https://www.linkedin.com/company/avinya-co-in', gradient:'radial-gradient(circle, rgba(76,53,140,1) 69%, rgba(28,10,70,1) 81%, rgba(174,183,238,1) 82%)' }
 ];
 
 export default function SocialMedia() {
@@ -18,6 +20,7 @@ export default function SocialMedia() {
     <Box sx={{ position: 'fixed', bottom: 16, right: 16, height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="SpeedDial social media links"
+        FabProps={{size: 'small'}}
         sx={{
           position: 'absolute',
           bottom: 16,
@@ -39,7 +42,7 @@ export default function SocialMedia() {
             tooltipTitle={action.name}
             onClick={() => window.open(action.link, '_blank')}
             sx={{
-              backgroundColor: '#25d366',
+              background: action.gradient,
               color: 'white',
               '&:hover': {
                 backgroundColor: '#128C7E',

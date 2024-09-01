@@ -12,8 +12,8 @@
     pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
     pkgs.busybox
-    pkgs.bashInteractive  # For Bash shell
-    pkgs.bash-completion  # Bash auto-completion package
+    pkgs.bashInteractive # For Bash shell
+    pkgs.bash-completion # Bash auto-completion package
   ];
 
   # Sets environment variables in the workspace
