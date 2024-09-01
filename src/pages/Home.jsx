@@ -7,7 +7,7 @@ import Services from "../components/Services";
 import WhyUs from "../components/WhyUs";
 import FAQs from "../components/FAQs";
 import Contact from "../components/Contact";
-import WhatsAppIcon from "../components/WhatsAppIcon";
+import SocialMedia from "../components/SocialMedia";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -16,16 +16,13 @@ const Home = () => {
       <Navbar />
       <Hero />
       <main id="main">
-        {/* <div className="h-screen"> */}
           <About />
           <WhyUs />
-        {/* </div> */}
         <Services />
-        {/* <Features /> */}
         <FAQs />
         <Contact />
       </main>
-      <WhatsAppIcon />
+      <SocialMedia />
       <Footer />
     </div>
   );

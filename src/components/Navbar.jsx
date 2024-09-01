@@ -1,44 +1,182 @@
-import { useState } from "react";
-import { Menu } from "lucide-react";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import AdbIcon from '@mui/icons-material/Adb';
+import Mode from './Mode';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const pages = ['Home', 'About', 'Services', 'Contact'];
+
+function Navbar() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-20 h-16">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
-        {/* Logo */}
-        <a href="index.html" className="flex items-center">
-          <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
-        </a>
+    <AppBar position="fixed" sx={{ backgroundColor: 'white'}}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            <a href="index.html" className="flex items-center">
+              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
+            </a>
+          </Typography>
 
-        {/* Navigation */}
-        <nav className={`absolute top-full left-0 w-full bg-white md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'block' : 'hidden md:block'}`}>
-          <ul className="flex flex-col md:flex-row md:items-center md:space-x-6 p-4 md:p-0 text-lg">
-            <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#hero">Home</a></li>
-            <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#about">About</a></li>
-            <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#services">Services</a></li>
-            <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#contact">Contact</a></li>
-            <li>
-              <a className="block" href="#contact">
-                <div className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 w-max">
-                  Get Started
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-gray-800 hover:text-blue-600 transition-colors duration-200"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <Menu size={24} />
-        </button>
-      </div>
-    </header >
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' } }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            <a href="index.html" className="flex items-center">
+              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
+            </a>
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold' }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Tooltip title="Open Modesettings">
+              {/* <Mode/> */}
+            </Tooltip>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
-};
-
+}
 export default Navbar;
+
+// import { useState } from "react";
+// import { Menu } from "lucide-react";
+
+// const Navbar = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+
+//   return (
+//     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-20 h-16">
+//       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+//         {/* Logo */}
+//         <a href="index.html" className="flex items-center">
+//           <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
+//         </a>
+
+//         {/* Navigation */}
+//         <nav className={`absolute top-full left-0 w-full bg-white md:relative md:top-auto md:left-auto md:w-auto md:bg-transparent transition-all duration-300 ease-in-out ${isOpen ? 'block' : 'hidden md:block'}`}>
+//           <ul className="flex flex-col md:flex-row md:items-center md:space-x-6 p-4 md:p-0 text-lg">
+//             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#hero">Home</a></li>
+//             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#about">About</a></li>
+//             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#services">Services</a></li>
+//             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#contact">Contact</a></li>
+//             <li>
+//               <a className="block" href="#contact">
+//                 <div className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 w-max">
+//                   Get Started
+//                 </div>
+//               </a>
+//             </li>
+//           </ul>
+//         </nav>
+
+//         {/* Mobile menu button */}
+//         <button
+//           className="md:hidden text-gray-800 hover:text-blue-600 transition-colors duration-200"
+//           onClick={() => setIsOpen(!isOpen)}
+//         >
+//           <Menu size={24} />
+//         </button>
+//       </div>
+//     </header >
+//   );
+// };
+
+// export default Navbar;
