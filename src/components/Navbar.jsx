@@ -61,6 +61,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
+              style = {{color: 'black'}}
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -68,7 +69,7 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -120,7 +121,9 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold' }}
               >
-                {page}
+                <Typography sx={{ fontFamily:'sans-serif'}}>
+                  {page}
+                </Typography>
               </Button>
             ))}
           </Box>

@@ -2,38 +2,51 @@ import { useState } from 'react';
 
 const faqData = [
   {
-    question: "What is Avinya, and what services do you offer?",
-    answer: "Avinya is a marketing and consulting company specializing in assisting B2B businesses looking to expand into India. We offer a wide range of services, including market entry strategy, lead generation, cold calling, cold emailing, in-person visits, social media advertising, branding, website development, and more."
+    question: "What services does Avinya Marketing Solution offer?",
+    answer: "Avinya Marketing Solution specializes in assisting exporters by providing comprehensive lists of potential buyers in international markets. Our services include detailed contact information for key decision-makers, such as purchase managers, when available, helping you connect directly with the right people."
   },
   {
-    question: "Why should I choose Avinya for my market expansion into India?",
-    answer: "Avinya brings a wealth of experience, expertise, and a deep understanding of the Indian market. Our result-oriented approach, personalized strategies, and flexible pricing model ensure you get the best value for your investment."
+    question: "How does Avinya Marketing Solution help exporters save time and money?",
+    answer: "Finding reliable buyers in international markets can be time-consuming and costly. Our targeted research and customized buyer lists streamline this process, enabling you to focus on selling your products rather than searching for buyers. By providing direct contact details of key decision-makers, we further reduce the effort and resources required to make valuable connections."
   },
   {
-    question: "How do you customize your services to suit my business needs?",
-    answer: "We take the time to understand your specific business goals, industry, and target audience. Based on this information, we develop tailored strategies that align with your unique requirements and objectives."
+    question: "Why is finding buyers in international markets so challenging?",
+    answer: "International markets involve diverse regulations, cultural differences, and varying market conditions. Identifying and connecting with reliable buyers requires extensive research, market knowledge, and access to accurate, up-to-date information, which can be difficult for exporters to manage independently."
   },
   {
-    question: "What sets Avinya apart from other marketing and consulting firms?",
-    answer: "Avinya stands out due to our deep cross-cultural expertise, comprehensive market research, and hands-on approach. We take pride in being your reliable partner, committed to your success every step of the way."
+    question: "How do you help exporters find buyers in challenging markets?",
+    answer: "We conduct thorough, targeted research to identify potential buyers in specific international markets. Our team uses a combination of data sources, industry expertise, and market trends to create accurate and relevant buyer lists tailored to your product and target regions. When possible, we also include contact details of key individuals like purchase managers to facilitate direct communication."
   },
   {
-    question: "How do you ensure the quality of your lead generation services?",
-    answer: "Our lead generation services are based on a data-driven approach, utilizing advanced tools and methodologies. We target high-potential prospects and employ personalized communication strategies to ensure effective lead conversion."
+    question: "What industries do you support in finding international buyers?",
+    answer: "We work with exporters across a wide range of industries, including agriculture, manufacturing, textiles, and more. If your industry is highly specialized, we can customize our research to locate the most relevant buyers in your desired international markets."
   },
   {
-    question: "How do you handle cultural differences in business interactions?",
-    answer: "Our team undergoes cultural sensitivity training, enabling us to navigate diverse business cultures with respect and professionalism. We bridge the gap, ensuring smooth and successful interactions with Indian counterparts."
+    question: "Can your services be tailored to specific countries or regions?",
+    answer: "Yes, our services are fully customizable. Whether you're looking to enter a specific country or a broader region, we can provide buyer lists and marketing insights that align with your goals and market entry strategy."
   },
   {
-    question: "What type of pricing model do you follow?",
-    answer: "Avinya follows a flexible pricing model tailored to your specific needs and budget. Our aim is to provide cost-effective solutions without compromising on the quality of services."
+    question: "How frequently are your buyer lists updated?",
+    answer: "We regularly update our buyer lists to reflect the latest market conditions and buyer information. This ensures that you are always working with the most current and relevant data, giving you a competitive edge in the international market."
   },
   {
-    question: "How can I get started with Avinya's services?",
-    answer: "Getting started is easy! Simply reach out to us through our website's contact form, and one of our representatives will get in touch with you promptly. We will schedule a consultation to understand your requirements and propose a suitable action plan for your market expansion in India."
+    question: "What sets Avinya Marketing Solution apart from other companies?",
+    answer: "Our deep understanding of international trade, combined with our focus on providing high-quality, customized buyer lists, makes us a valuable partner for exporters. We are dedicated to helping you overcome the challenges of finding buyers in foreign markets, ensuring your success in global business."
+  },
+  {
+    question: "How can I start working with Avinya Marketing Solution?",
+    answer: "To get started, simply contact us through our website or give us a call. We’ll discuss your specific needs and develop a customized plan to connect you with the right buyers in the international markets you’re targeting."
+  },
+  {
+    question: "What is the expected delivery time for a customized buyer list?",
+    answer: "The delivery time depends on the complexity of your request and the specific market you're targeting. However, we aim to provide your tailored buyer list within 7-14 business days, ensuring you have the information you need to move forward quickly."
+  },
+  {
+    question: "How can I trust the accuracy and reliability of your buyer lists?",
+    answer: "We employ a rigorous research process, cross-referencing multiple data sources to ensure accuracy and reliability. Our commitment to quality means you can trust that the buyer lists we provide are dependable and tailored to your specific export needs."
   }
 ];
+
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(null);
