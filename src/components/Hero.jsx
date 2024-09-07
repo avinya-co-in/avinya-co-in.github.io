@@ -1,3 +1,4 @@
+import './Hero.css';
 function Hero() {
   return (
     <section id="hero" className="bg-white py-8 h-screen flex items-center">
@@ -11,9 +12,12 @@ function Hero() {
               Your Gateway to the Indian Market!
             </h1>
             <ul className="mt-4 space-y-2 text-sm lg:text-lg">
-              <li className="flex items-center">
-                <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
-                Expert assistance for companies wishing to expand business&nbsp;<div className="font-black">Globally</div>
+              <li className="flex items-start">
+                <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2 flex-shrink-0" />
+                <div>
+                  Expert assistance for companies wishing to expand business&nbsp;
+                  <span className="font-black">Globally</span>
+                </div>
               </li>
               <li className="flex items-center">
                 <img src="/assets/icon/tick.svg" className="w-4 h-4 mr-2" />
