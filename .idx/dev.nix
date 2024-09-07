@@ -1,6 +1,11 @@
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
+   environment.systemPackages = with pkgs; [
+    curl         # To use 'curl' for fetching public IP
+    wget         # To use 'wget' for fetching public IP
+    dnsutils     # To use 'dig' command (includes dig)
+  ];
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
 

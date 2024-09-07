@@ -36,7 +36,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'white'}}>
+    <AppBar position="fixed" sx={{ backgroundColor: 'white', color: 'black'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -59,7 +59,7 @@ function Navbar() {
             </a>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 2, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               style = {{color: 'black'}}
               size="large"
@@ -74,6 +74,7 @@ function Navbar() {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
+              iconButtonRef={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
@@ -82,6 +83,9 @@ function Navbar() {
               transformOrigin={{
                 vertical: 'top',
                 horizontal: 'left',
+              }}
+              MenuListProps={{
+                'aria-labelledby': 'basic-button',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -108,6 +112,10 @@ function Navbar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
             }}
           >
             <a href="index.html" className="flex items-center">
@@ -127,10 +135,8 @@ function Navbar() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open Modesettings">
-              {/* <Mode/> */}
-            </Tooltip>
+          <Box>
+            <Mode />
           </Box>
         </Toolbar>
       </Container>
