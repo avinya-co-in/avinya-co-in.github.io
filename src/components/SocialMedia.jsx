@@ -21,8 +21,9 @@ export default function SocialMedia() {
 
   return (
     <Box
-      sx={{ position: 'fixed', bottom: 16, right: 16, height: 320, transform: 'translateZ(0px)', flexGrow: 1}}
+      sx={{ position: 'fixed', bottom: 16, right: 16, height: 200, transform: 'translateZ(0px)', flexGrow: 1}}
       onMouseEnter={() => setHover(true)}
+      // onClick={() => setHover(hover ? false : true)}
       onMouseLeave={() => setHover(false)}
     >
       <SpeedDial
@@ -40,7 +41,6 @@ export default function SocialMedia() {
             '&:hover': {
               backgroundColor: '#128C7E',
             },
-            zIndex: actions.length + 1, // Main icon on top
           },
         }}
         icon={!hover ? <WhatsAppIcon /> : <CloseIcon />}
@@ -52,18 +52,16 @@ export default function SocialMedia() {
             tooltipTitle={action.name}
             onClick={() => window.open(action.link, '_blank')}
             sx={{
-              position: 'absolute',
-              right: -5,
-              bottom: 0,
-              transition: 'transform 0.3s ease-in-out',
-              transform: hover
-                ? `translateY(-${(index + 1) * 50}px)`  // Expand upwards on hover
-                : `translateY(-${index * 10}px)`,       // Stack effect with visible edges
+              // position: 'absolute',
+              // right: -5,
+              // bottom: 0,
+              // transition: 'transform 0.3s ease-in-out',
+              // transform: hover
+              //   ? `translateY(-${(index + 1) * 50}px)`  // Expand upwards on hover
+              //   : `translateY(-${index * 10}px)`,       // Stack effect with visible edges
               background: action.gradient,
               color: 'white',
-              zIndex: actions.length - index - 1,
               opacity: 1,
-              visibility: 'visible',
               '&:hover': {
                 backgroundColor: '#128C7E',
               },
