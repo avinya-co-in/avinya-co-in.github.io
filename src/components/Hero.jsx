@@ -4,7 +4,7 @@ import './Hero.css';
 function Hero() {
   return (
     <>
-    <Box id="hero" sx={{ bgcolor: 'white', py: 8, height: '100vh', display: 'flex', alignItems: 'center' }}>
+    <Box id="home" sx={{ bgcolor: 'white', py: 8, height: '100vh', display: 'flex', alignItems: 'center' }}>
       <Container maxWidth="lg">
         <Box display="flex" flexDirection={{ xs: 'column-reverse', lg: 'row' }} alignItems="center">
           <Box

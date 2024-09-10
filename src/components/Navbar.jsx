@@ -121,6 +121,8 @@ function Navbar() {
                 <MenuItem
                   key={page}
                   onClick={handleCloseNavMenu}
+                  component = 'a'
+                  href = {`#${page.toLowerCase()}`}
                   sx={{
                     textAlign: 'center',
                     backgroundColor: 'transparent',
