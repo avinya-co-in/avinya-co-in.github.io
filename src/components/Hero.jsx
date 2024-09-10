@@ -25,7 +25,7 @@ function Hero() {
             </Typography>
             <List sx={{ mt: 4 }}>
               <ListItem sx={{ display: 'flex' }}>
-                <ListItemIcon style = {{minWidth : '8%'}}>
+                <ListItemIcon>
                   <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
                 </ListItemIcon>
                 <ListItemText
@@ -40,19 +40,19 @@ function Hero() {
                 />
               </ListItem>
               <ListItem>
-                <ListItemIcon style = {{minWidth : '8%'}}>
-                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                <ListItemIcon>
+                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} />
                 </ListItemIcon>
                 <ListItemText primary="Comprehensive market analysis and strategic planning" />
               </ListItem>
               <ListItem>
-                <ListItemIcon style = {{minWidth : '8%'}}>
-                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                <ListItemIcon>
+                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} />
                 </ListItemIcon>
                 <ListItemText primary="Cultural expertise to ensure effective cross-border operations" />
               </ListItem>
             </List>
-            <Box mt={1}>
+            <Box mt={5}>
               <Button
                 variant="contained"
                 color="primary"
@@ -70,7 +70,7 @@ function Hero() {
               </Button>
             </Box>
           </Box>
-          <Box flex={1} mb={{ xs: -5, lg: 0 }}>
+          <Box flex={1} mt = {{xs : 18, lg : 0}}>
             <Box
               component="img"
               src="/assets/img/hero-img.png"
