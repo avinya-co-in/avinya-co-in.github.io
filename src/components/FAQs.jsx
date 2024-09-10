@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Box, Container, Typography, List, ListItem, Collapse, IconButton, Paper } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const faqData = [
   {
@@ -56,36 +58,81 @@ const FAQs = () => {
   };
 
   return (
-    <section id="faq" className="bg-white flex items-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">FAQs</h2>
-        </div>
+    <>
+      <Box id="faq" sx={{ bgcolor: 'white', display: 'flex', alignItems: 'center', py: 8 }}>
+        <Container maxWidth="lg">
+          {/* Heading */}
+          <Box textAlign="center" mb={8}>
+            <Typography variant="h4" fontWeight="bold" color="text.primary">
+              FAQs
+            </Typography>
+          </Box>
 
-        <ul className="space-y-4">
-          {faqData.map((item, index) => (
-            <li key={index}>
-              <div
-                className="flex justify-between items-center cursor-pointer py-4 px-6 border hover:border-blue-700 rounded-lg shadow-md"
-                onClick={() => toggleFAQ(index)}
-              >
-                <span className="text-lg sm:text-2xl text-gray-800">{item.question}</span>
-                <i className={`text-gray-600 transform transition-transform duration-200 ${activeIndex === index ? 'rotate-180' : ''}`}>
-                  <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12 14.121l-5.657-5.657 1.414-1.414 4.243 4.243 4.243-4.243 1.414 1.414z" />
-                  </svg>
-                </i>
-              </div>
-              {activeIndex === index && (
-                <div className="p-6 text-gray-700 text-base sm:text-xl">
-                  {item.answer}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+          {/* FAQ List */}
+          <List sx={{ gap: 2 }}>
+            {faqData.map((item, index) => (
+              <ListItem key={index} sx={{ flexDirection: 'column', alignItems: 'stretch', mb: 2, px: 0 }}>
+                <Paper
+                  elevation={3}
+                  sx={{ 
+                    display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
+                    cursor: 'pointer', py: 3, px: 4, 
+                    transition: 'border 0.3s', border: '1px solid transparent', 
+                    '&:hover': { borderColor: 'primary.main' }, borderRadius: 2
+                  }}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <Typography variant="h6" color="text.primary">
+                    {item.question}
+                  </Typography>
+                  <IconButton>
+                    <ExpandMoreIcon sx={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                  </IconButton>
+                </Paper>
+
+                <Collapse in={activeIndex === index}>
+                  <Box p={4} mt={-1}>
+                    <Typography variant="body1" color="text.secondary">
+                      {item.answer}
+                    </Typography>
+                  </Box>
+                </Collapse>
+              </ListItem>
+            ))}
+          </List>
+        </Container>
+      </Box>
+    </>
+    // <section id="faq" className="bg-white flex items-center">
+    //   <div className="container mx-auto px-4">
+    //     <div className="text-center mb-8">
+    //       <h2 className="text-3xl font-bold text-gray-900">FAQs</h2>
+    //     </div>
+
+    //     <ul className="space-y-4">
+    //       {faqData.map((item, index) => (
+    //         <li key={index}>
+    //           <div
+    //             className="flex justify-between items-center cursor-pointer py-4 px-6 border hover:border-blue-700 rounded-lg shadow-md"
+    //             onClick={() => toggleFAQ(index)}
+    //           >
+    //             <span className="text-lg sm:text-2xl text-gray-800">{item.question}</span>
+    //             <i className={`text-gray-600 transform transition-transform duration-200 ${activeIndex === index ? 'rotate-180' : ''}`}>
+    //               <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    //                 <path d="M12 14.121l-5.657-5.657 1.414-1.414 4.243 4.243 4.243-4.243 1.414 1.414z" />
+    //               </svg>
+    //             </i>
+    //           </div>
+    //           {activeIndex === index && (
+    //             <div className="p-6 text-gray-700 text-base sm:text-xl">
+    //               {item.answer}
+    //             </div>
+    //           )}
+    //         </li>
+    //       ))}
+    //     </ul>
+    //   </div>
+    // </section>
   );
 };
 
