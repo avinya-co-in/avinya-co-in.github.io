@@ -52,7 +52,7 @@ function Hero() {
                 <ListItemText primary="Cultural expertise to ensure effective cross-border operations" />
               </ListItem>
             </List>
-            <Box mt={5}>
+            <Box mt={{xs: 1, lg: 0}}>
               <Button
                 variant="contained"
                 color="primary"
@@ -74,7 +74,8 @@ function Hero() {
             <Box
               component="img"
               src="/assets/img/hero-img.png"
-              sx={{ width: '100%', height: 'auto' }}
+              sx={{ width: '100%'}}
+              height = {{xs : '250px', lg : 'auto'}}
               alt="Hero Image"
             />
           </Box>

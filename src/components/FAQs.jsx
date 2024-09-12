@@ -59,7 +59,7 @@ const FAQs = () => {
 
   return (
     <>
-      <Box id="faq" sx={{ bgcolor: 'white', display: 'flex', alignItems: 'center', py: 8 }}>
+      <Box id="faq" sx={{ bgcolor: 'white', display: 'flex', alignItems: 'center'}}>
         <Container maxWidth="lg">
           {/* Heading */}
           <Box textAlign="center" mb={8}>
@@ -69,9 +69,9 @@ const FAQs = () => {
           </Box>
 
           {/* FAQ List */}
-          <List sx={{ gap: 2 }}>
+          <List sx={{ gap: 2 }} style={{marginTop:'-35px'}}>
             {faqData.map((item, index) => (
-              <ListItem key={index} sx={{ flexDirection: 'column', alignItems: 'stretch', mb: 2, px: 0 }}>
+              <ListItem key={index} sx={{ flexDirection: 'column', alignItems: 'stretch', mb: 2, px: 0 }} >
                 <Paper
                   elevation={3}
                   sx={{ 
@@ -82,7 +82,7 @@ const FAQs = () => {
                   }}
                   onClick={() => toggleFAQ(index)}
                 >
-                  <Typography variant="h6" color="text.primary">
+                  <Typography color="text.primary" style = {{fontSize:'15px'}}>
                     {item.question}
                   </Typography>
                   <IconButton>
@@ -92,7 +92,7 @@ const FAQs = () => {
 
                 <Collapse in={activeIndex === index}>
                   <Box p={4} mt={-1}>
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography color="text.secondary" style = {{fontSize:'13px'}}>
                       {item.answer}
                     </Typography>
                   </Box>

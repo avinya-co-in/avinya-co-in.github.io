@@ -1,18 +1,22 @@
-import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Paper, Stack, Typography } from "@mui/material";
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import LanguageIcon from '@mui/icons-material/Language';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import FitbitIcon from '@mui/icons-material/Fitbit';
 
 const Services = () => {
   return (
     <>
-      <Box id="services" sx={{ py: 12, bgcolor: 'white', display: 'flex', alignItems: 'center' }}>
+      <Box id="services" sx={{ py: 12, bgcolor: 'white', display: 'flex', alignItems: 'center' }} mt = {{xs:-6, md:0, lg:0}}>
         <Container maxWidth="lg">
           {/* Heading */}
           <Box textAlign="center" mb={8}>
             <Typography variant="h4" fontWeight="bold" color="text.primary">
               Services
             </Typography>
-            <Typography variant="h6" color="text.secondary" mt={2}>
+            <Typography style={{fontSize:'17px'}} color="text.secondary" mt={2}>
               Unlock the potential of the Indian market with <br />
-              <Typography variant='h6' component='span' sx={{fontWeight : 'bold', color:'black'}}>Avinya</Typography>'s comprehensive suite of B2B marketing and consulting services.
+              <Typography style={{fontSize:'17px'}} component='span' sx={{fontWeight : 'bold', color:'black'}}>Avinya</Typography>'s comprehensive suite of B2B marketing and consulting services.
             </Typography>
           </Box>
 
@@ -30,11 +34,14 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
-                  >
-                    <Typography variant="h6" color="primary.main" fontWeight="600">
-                      Lead Generation
-                    </Typography>
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' }, height:'250px' }}
+                    >
+                    <Stack direction="row" spacing={1} justifyContent="center">
+                      <LeaderboardIcon sx={{ color: 'primary.main' }} />
+                      <Typography variant="h6" color="primary.main" fontWeight="600" style={{marginTop:'-4px'}}>
+                          Lead Generation
+                      </Typography>
+                    </Stack>
                     <Typography variant="body1" color="text.secondary" mt={2}>
                       We facilitate High Quality Lead gathering for improvement of your business.
                     </Typography>
@@ -45,11 +52,14 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'orange' } }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'orange' }, height:'250px' }}
                   >
-                    <Typography variant="h6" sx={{ color: 'orange' }} fontWeight="600">
-                      Digital Development
-                    </Typography>
+                    <Stack direction="row" spacing={1} justifyContent="center">
+                      <LanguageIcon sx={{ color: 'orange' }} />
+                      <Typography variant="h6" sx={{ color: 'orange' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                        Digital Development
+                      </Typography>
+                    </Stack>
                     <Typography variant="body1" color="text.secondary" mt={2}>
                       Our team expertise in developing digital solutions like Website development, social media branding, and other custom services.
                     </Typography>
@@ -60,11 +70,14 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'pink' } }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: '#ad4456' }, height:'250px' }}
                   >
-                    <Typography variant="h6" sx={{ color: 'pink' }} fontWeight="600">
-                      Consultant Service
-                    </Typography>
+                    <Stack direction="row" spacing={1} justifyContent="center">
+                      <SupportAgentIcon sx={{ color: '#ad4456' }} />
+                      <Typography variant="h6" sx={{ color: '#ad4456' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                        Consultant Service
+                      </Typography>
+                    </Stack>
                     <Typography variant="body1" color="text.secondary" mt={2}>
                       Avinya team helps in improving your business by using our expertise to identify problems in your business.
                     </Typography>
@@ -75,11 +88,14 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'teal' } }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'teal' }, height:'250px' }}
                   >
-                    <Typography variant="h6" sx={{ color: 'teal' }} fontWeight="600">
-                      Branding Solutions
-                    </Typography>
+                    <Stack direction="row" spacing={1} justifyContent="center">
+                      <FitbitIcon sx={{ color: 'teal' }} />
+                      <Typography variant="h6" sx={{ color: 'teal' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                        Branding Solutions
+                      </Typography>
+                    </Stack>
                     <Typography variant="body1" color="text.secondary" mt={2}>
                       We craft a compelling brand identity that resonates with the Indian audience, setting the stage for long-term success.
                     </Typography>

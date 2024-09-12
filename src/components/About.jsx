@@ -2,7 +2,7 @@ import { Box, Container, List, ListItem, ListItemIcon, ListItemText, Typography 
 const About = () => {
   return (
     <>
-      <Box id="about" sx={{ bgcolor: 'white', py: 8 }}>
+      <Box id="about" sx={{ bgcolor: 'white', py: 8 }} mt={{xs:5, lg:0}}>
         <Container maxWidth="lg">
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
             <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt = {{xs : 5, md : 0, lg: -19}}>

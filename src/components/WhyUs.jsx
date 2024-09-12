@@ -11,7 +11,7 @@ function WhyUs() {
                 elevation={3} 
                 sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
               >
-                <Typography variant="h2" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color="primary.main">
                   01
                 </Typography>
                 <Typography variant="h6" fontWeight="600" mt={2}>
@@ -29,7 +29,7 @@ function WhyUs() {
                 elevation={3} 
                 sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
               >
-                <Typography variant="h2" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color="primary.main">
                   02
                 </Typography>
                 <Typography variant="h6" fontWeight="600" mt={2}>
@@ -47,7 +47,7 @@ function WhyUs() {
                 elevation={3} 
                 sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
               >
-                <Typography variant="h2" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color="primary.main">
                   03
                 </Typography>
                 <Typography variant="h6" fontWeight="600" mt={2}>
