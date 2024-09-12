@@ -18,25 +18,23 @@ const pages = ['Home', 'About', 'Services', 'Contact'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [mode, setMode] = React.useState(() => localStorage.getItem("theme") || "light");
+
+  // Update the theme in Navbar whenever it changes in the Mode component
+  const updateMode = (newMode) => {
+    setMode(newMode);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'white', color: 'black'}}>
+    <AppBar position="fixed" sx={{ backgroundColor: mode === 'light' ? 'white' : 'red', color: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -61,7 +59,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 2, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              style = {{color: 'black'}}
+              style={{ color: 'black' }}
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -69,12 +67,11 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon/>
+              <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              iconButtonRef={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
@@ -87,42 +84,13 @@ function Navbar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
-              slotProps={{
-                paper: {
-                  elevation: 0,
-                  sx: {
-                    overflow: 'visible',
-                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                    width: '100%',
-                    mt: 1.5,
-                    '& .MuiAvatar-root': {
-                      width: 32,
-                      height: 32,
-                      ml: -0.5,
-                      mr: 1,
-                    },
-                    '&::before': {
-                      content: '""',
-                      display: 'block',
-                      position: 'absolute',
-                      top: 0,
-                      left: 14,
-                      width: 10,
-                      height: 10,
-                      bgcolor: 'background.paper',
-                      transform: 'translateY(-50%) rotate(45deg)',
-                      zIndex: 0,
-                    },
-                  },
-                },
-              }}
             >
               {pages.map((page) => (
                 <MenuItem
                   key={page}
                   onClick={handleCloseNavMenu}
-                  component = 'a'
-                  href = {`#${page.toLowerCase()}`}
+                  component='a'
+                  href={`#${page.toLowerCase()}`}
                   sx={{
                     textAlign: 'center',
                     backgroundColor: 'transparent',
@@ -167,14 +135,16 @@ function Navbar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold' }}
               >
-                <Typography sx={{ fontFamily:'sans-serif'}}>
+                <Typography sx={{ fontFamily: 'sans-serif' }}>
                   {page}
                 </Typography>
               </Button>
             ))}
           </Box>
+
           <Box>
-            <Mode />
+            {/* Pass the updateMode function to Mode component */}
+            <Mode updateMode={updateMode} />
           </Box>
         </Toolbar>
       </Container>
