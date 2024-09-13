@@ -2,10 +2,10 @@ import { Box, Container, List, ListItem, ListItemIcon, ListItemText, Typography 
 const About = () => {
   return (
     <>
-      <Box id="about" sx={{ bgcolor: 'white', py: 8 }} mt={{xs:5, lg:0}}>
+      <Box id="about" sx={{ bgcolor: 'white', py: 8 }} mt={{xs:5, lg:0}} >
         <Container maxWidth="lg">
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
-            <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt = {{xs : 5, md : 0, lg: -19}}>
+            <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt = {{xs : 5, md : 0, lg: 0}}>
               <Typography variant="h4" fontWeight="bold" color="primary.main" mb={3}>
                 About Avinya
               </Typography>
@@ -20,11 +20,11 @@ const About = () => {
               <List sx={{ mb: 3 }}>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}}  />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography variant="body1">
+                      <Typography ml={{xs: -4, lg: -4}}>
                         <b>Proven Success:&nbsp;</b> Expertly guiding international companies into the Indian market.
                       </Typography>
                     }
@@ -32,11 +32,11 @@ const About = () => {
                 </ListItem>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}} />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography variant="body1">
+                      <Typography ml={{xs: -4, lg: -4}}>
                         <b>In-Depth Knowledge:&nbsp;</b> Deep understanding of India's business landscape and culture.
                       </Typography>
                     }
@@ -44,11 +44,11 @@ const About = () => {
                 </ListItem>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}} />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography variant="body1">
+                      <Typography ml={{xs: -4, lg: -4}}>
                         <b>Tailored Solutions:&nbsp;</b> Customized strategies to meet your unique business needs.
                       </Typography>
                     }

@@ -4,8 +4,8 @@ import './Hero.css';
 function Hero() {
   return (
     <>
-    <Box id="home" sx={{ bgcolor: 'white', py: 8, height: '100vh', display: 'flex', alignItems: 'center' }}>
-      <Container maxWidth="lg">
+    <Box id="home" sx={{ bgcolor: 'white', py: 8, height: '100vh', display: 'flex', alignItems: 'center' }} >
+      <Container maxWidth="lg" >
         <Box display="flex" flexDirection={{ xs: 'column-reverse', lg: 'row' }} alignItems="center">
           <Box
             sx={{
@@ -26,11 +26,11 @@ function Hero() {
             <List sx={{ mt: 4 }}>
               <ListItem sx={{ display: 'flex' }}>
                 <ListItemIcon>
-                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} />
+                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 3, lg: 0}} />
                 </ListItemIcon>
                 <ListItemText
                   primary={
-                    <Typography variant="body1">
+                    <Typography ml={{xs: -4, lg: -4}}>
                       Expert assistance for companies wishing to expand business{' '}
                       <Typography component="span" sx={{ fontWeight: 'bold' }}>
                         Globally
@@ -41,15 +41,24 @@ function Hero() {
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} />
+                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} mb={{xs: 3, lg: 0}}  />
                 </ListItemIcon>
-                <ListItemText primary="Comprehensive market analysis and strategic planning" />
+                <ListItemText primary={
+                  <Typography ml={{xs: -4, lg: -4}}>
+                    Comprehensive market analysis and strategic planning
+                  </Typography>
+                 } />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} />
+                  <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16}} mb={{xs: 3, lg: 0}} />
                 </ListItemIcon>
-                <ListItemText primary="Cultural expertise to ensure effective cross-border operations" />
+                <ListItemText primary={
+                  <Typography ml={{xs: -4, lg: -4}}>
+                    Cultural expertise to ensure effective cross-border operations
+                  </Typography>
+                    }
+                />
               </ListItem>
             </List>
             <Box mt={{xs: 1, lg: 0}}>
@@ -70,11 +79,12 @@ function Hero() {
               </Button>
             </Box>
           </Box>
-          <Box flex={1} mt = {{xs : 18, lg : 0}}>
+          <Box flex={1} mt = {{xs : 20, lg : 0}} >
             <Box
               component="img"
               src="/assets/img/hero-img.png"
               sx={{ width: '100%'}}
+              
               height = {{xs : '250px', lg : 'auto'}}
               alt="Hero Image"
             />

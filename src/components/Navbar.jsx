@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Mode from './Mode';
 
-const pages = ['Home', 'About', 'Services', 'Contact'];
+const pages = ['Home', 'About', 'Services', 'Contact', 'Career'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -34,7 +34,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: mode === 'light' ? 'white' : 'red', color: 'black' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: mode === 'light' ? 'white' : 'red', color: 'black',height:'auto' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -84,6 +84,35 @@ function Navbar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
+              slotProps={{
+                paper: {
+                  elevation: 0,
+                  sx: {
+                    overflow: 'visible',
+                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                    width: '100%',
+                    mt: 1.5,
+                    '& .MuiAvatar-root': {
+                      width: 32,
+                      height: 32,
+                      ml: -0.5,
+                      mr: 1,
+                    },
+                    '&::before': {
+                      content: '""',
+                      display: 'block',
+                      position: 'absolute',
+                      top: 0,
+                      left: 14,
+                      width: 10,
+                      height: 10,
+                      bgcolor: 'background.paper',
+                      transform: 'translateY(-50%) rotate(45deg)',
+                      zIndex: 0,
+                    },
+                  },
+                },
+              }}
             >
               {pages.map((page) => (
                 <MenuItem
@@ -132,6 +161,7 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                href={`#${page.toLowerCase()}`}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold' }}
               >

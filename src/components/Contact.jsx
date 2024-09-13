@@ -2,7 +2,7 @@ import { Box, Container, Typography, Grid, Paper, Link } from '@mui/material';
 const Contact = () => {
   return (
     <>
-      <Box id="contact" sx={{ my: 4, scrollMarginTop: '100px' }}> {/* Adjust scroll position */}
+      <Box id="contact" sx={{ my: 4, scrollMarginTop: '100px', marginBottom: '100px' }}> {/* Adjust scroll position */}
         <Container maxWidth="lg">
           {/* Section Heading */}
           <Box textAlign="center" mb={8}>

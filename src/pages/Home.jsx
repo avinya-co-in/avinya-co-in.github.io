@@ -9,6 +9,7 @@ import FAQs from "../components/FAQs";
 import Contact from "../components/Contact";
 import SocialMedia from "../components/SocialMedia";
 import Footer from "../components/Footer";
+import CareersPage from "../components/CareersPage";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <Services />
         <FAQs />
         <Contact />
+        <CareersPage/>
       </main>
       <SocialMedia />
       <Footer />
