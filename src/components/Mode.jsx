@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
-import './Mode.css'
+import React, { useContext } from "react";
+import './Mode.css';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import { IconButton } from "@mui/material";
+import { ThemeContext } from "./ThemeContext";
 
-
-export default function Mode({ updateMode }) {
-  const [mode, setMode] = useState(() => localStorage.getItem("theme") || "light");
-
-  // Update localStorage and trigger parent component update
-  useEffect(() => {
-    localStorage.setItem("theme", mode);
-    updateMode(mode);  // Pass the updated mode to the parent (Navbar)
-  }, [mode, updateMode]);
-
-  const toggleMode = () => {
-    setMode(prevMode => (prevMode === "light" ? "dark" : "light"));
-  };
+export default function Mode() {
+  const { mode, toggleMode } = useContext(ThemeContext);  // Use toggleMode from ThemeContext
 
   return (
     <div>

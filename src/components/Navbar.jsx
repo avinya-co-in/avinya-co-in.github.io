@@ -13,17 +13,15 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Mode from './Mode';
+import { ThemeContext } from './ThemeContext';
+import { themeColors } from './themeColors'; 
 
 const pages = ['Home', 'About', 'Services', 'Contact', 'Career'];
 
 function Navbar() {
+  const { mode } = React.useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [mode, setMode] = React.useState(() => localStorage.getItem("theme") || "light");
-
-  // Update the theme in Navbar whenever it changes in the Mode component
-  const updateMode = (newMode) => {
-    setMode(newMode);
-  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -34,7 +32,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: mode === 'light' ? 'white' : 'red', color: 'black',height:'auto' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: colors.navbar, height:'auto' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -53,7 +51,11 @@ function Navbar() {
             }}
           >
             <a href="index.html" className="flex items-center">
-              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
+              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" 
+              style={{
+                filter: mode === 'dark' ? 'invert(1)' : 'invert(0)', // Apply filter based on mode
+              }}
+              />
             </a>
           </Typography>
 
@@ -154,7 +156,11 @@ function Navbar() {
             }}
           >
             <a href="index.html" className="flex items-center">
-              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" />
+              <img src="/logo.png" alt="Avinya" className="h-12 w-auto" 
+              style={{
+                filter: mode === 'dark' ? 'invert(1)' : 'invert(0)', // Apply filter based on mode
+              }}
+              />
             </a>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -163,7 +169,7 @@ function Navbar() {
                 key={page}
                 href={`#${page.toLowerCase()}`}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold' }}
+                sx={{ my: 2, color: colors.heading, display: 'block', fontWeight: 'bold' }}
               >
                 <Typography sx={{ fontFamily: 'sans-serif' }}>
                   {page}
@@ -174,7 +180,7 @@ function Navbar() {
 
           <Box>
             {/* Pass the updateMode function to Mode component */}
-            <Mode updateMode={updateMode} />
+            <Mode/>
           </Box>
         </Toolbar>
       </Container>
