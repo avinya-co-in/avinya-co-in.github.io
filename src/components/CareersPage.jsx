@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
+import { WhatsApp } from '@mui/icons-material';
 
 const jobOpenings = [
   {
@@ -60,9 +61,12 @@ export default function CareersPage() {
                         <Button
                         variant="contained"
                         color="primary"
-                        href={`#apply-${job.title.toLowerCase().replace(/\s/g, '-')}`}
+                        href={`https://api.whatsapp.com/send/?phone=918980038802&text&type=phone_number&app_absent=0`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{ mt: 2 }}
                         >
-                        Apply Now
+                        Apply Now {" "}<WhatsApp/>
                         </Button>
                     </CardContent>
                 </Card>
