@@ -42,8 +42,8 @@ const Services = () => {
                     sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
                     >
                     <Stack direction="row" spacing={1} justifyContent="center">
-                      <LeaderboardIcon sx={{ color: 'primary.main' }} />
-                      <Typography variant="h6" color="primary.main" fontWeight="600" style={{marginTop:'-4px'}}>
+                      <LeaderboardIcon sx={{ color: colors.primary }} />
+                      <Typography variant="h6" color={colors.primary} fontWeight="600" style={{marginTop:'-4px'}}>
                           Lead Generation
                       </Typography>
                     </Stack>
@@ -57,11 +57,11 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'orange' }, height:'250px', bgcolor:colors.cardColor }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
                   >
                     <Stack direction="row" spacing={1} justifyContent="center">
-                      <LanguageIcon sx={{ color: 'orange' }} />
-                      <Typography variant="h6" sx={{ color: 'orange' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                      <LanguageIcon sx={{ color: colors.primary }} />
+                      <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
                         Digital Development
                       </Typography>
                     </Stack>
@@ -75,11 +75,11 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: '#ad4456' }, height:'250px', bgcolor:colors.cardColor }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
                   >
                     <Stack direction="row" spacing={1} justifyContent="center">
-                      <SupportAgentIcon sx={{ color: '#ad4456' }} />
-                      <Typography variant="h6" sx={{ color: '#ad4456' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                      <SupportAgentIcon sx={{ color: colors.primary }} />
+                      <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
                         Consultant Service
                       </Typography>
                     </Stack>
@@ -93,11 +93,11 @@ const Services = () => {
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'teal' }, height:'250px', bgcolor:colors.cardColor }}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
                   >
                     <Stack direction="row" spacing={1} justifyContent="center">
-                      <FitbitIcon sx={{ color: 'teal' }} />
-                      <Typography variant="h6" sx={{ color: 'teal' }} fontWeight="600" style={{marginTop:'-4px'}}>
+                      <FitbitIcon sx={{ color: colors.primary }} />
+                      <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
                         Branding Solutions
                       </Typography>
                     </Stack>
