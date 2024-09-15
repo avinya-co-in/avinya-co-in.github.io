@@ -1,23 +1,28 @@
 import { Box, Container, Grid, ListItemIcon, Paper, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+import { themeColors } from './themeColors';
 function WhyUs() {
+  const { mode } = useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   return (
     <>
-      <Box id="why-us" sx={{ bgcolor: 'white', py: 12 }}>
+      <Box id="why-us" sx={{ bgcolor: colors.background, py: 12 }}>
         <Container maxWidth="lg">
           <Grid container spacing={3}>
             {/* Card 1 */}
             <Grid item xs={12} md={4}>
               <Paper 
                 elevation={3} 
-                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
+                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: `1px solid transparent`, '&:hover': { borderColor: colors.primary }, backgroundColor: colors.cardColor }}
               >
-                <Typography variant="h4" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color={colors.primary}>
                   01
                 </Typography>
-                <Typography variant="h6" fontWeight="600" mt={2}>
+                <Typography variant="h6" fontWeight="600" color={colors.text} mt={2}>
                   Market Entry Specialists
                 </Typography>
-                <Typography variant="body1" color="text.secondary" mt={2} sx={{ height: '5rem' }}>
+                <Typography variant="body1" color={colors.text} mt={2} sx={{ height: '5rem' }}>
                   Avinya specializes in guiding international B2B businesses for a successful entry into India's dynamic market.
                 </Typography>
               </Paper>
@@ -27,15 +32,15 @@ function WhyUs() {
             <Grid item xs={12} md={4}>
               <Paper 
                 elevation={3} 
-                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
+                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, backgroundColor: colors.cardColor }}
               >
-                <Typography variant="h4" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color={colors.primary}>
                   02
                 </Typography>
-                <Typography variant="h6" fontWeight="600" mt={2}>
+                <Typography variant="h6" fontWeight="600" color={colors.text} mt={2}>
                   Tailored Strategies
                 </Typography>
-                <Typography variant="body1" color="text.secondary" mt={2} sx={{ height: '5rem' }}>
+                <Typography variant="body1" color={colors.text} mt={2} sx={{ height: '5rem' }}>
                   We customize solutions to match your unique goals, budget, and timeline, ensuring maximum impact.
                 </Typography>
               </Paper>
@@ -45,15 +50,15 @@ function WhyUs() {
             <Grid item xs={12} md={4}>
               <Paper 
                 elevation={3} 
-                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: 'primary.main' } }}
+                sx={{ p: 4, borderRadius: 2, transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, backgroundColor: colors.cardColor }}
               >
-                <Typography variant="h4" fontWeight="bold" color="primary.main">
+                <Typography variant="h4" fontWeight="bold" color={colors.primary}>
                   03
                 </Typography>
-                <Typography variant="h6" fontWeight="600" mt={2}>
+                <Typography variant="h6" fontWeight="600" color={colors.text} mt={2}>
                   Expertise in Indian Market
                 </Typography>
-                <Typography variant="body1" color="text.secondary" mt={2} sx={{ height: '5rem' }}>
+                <Typography variant="body1" color={colors.text} mt={2} sx={{ height: '5rem' }}>
                   Our team's in-depth understanding of the local business landscape and cultural intricacies ensures a smooth and rewarding transition.
                 </Typography>
               </Paper>

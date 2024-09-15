@@ -1,15 +1,20 @@
 import { Box, Container, Typography, Grid, Paper, Link } from '@mui/material';
+import { themeColors } from './themeColors';
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
 const Contact = () => {
+  const { mode } = useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   return (
     <>
-      <Box id="contact" sx={{ my: 4, scrollMarginTop: '100px', marginBottom: '100px' }}> {/* Adjust scroll position */}
+      <Box id="contact" sx={{ bgcolor: colors.background, scrollMarginTop: '100px' }}> {/* Adjust scroll position */}
         <Container maxWidth="lg">
           {/* Section Heading */}
           <Box textAlign="center" mb={8}>
-            <Typography variant="h4" fontWeight="bold" color="text.primary">
+            <Typography variant="h4" fontWeight="bold" color={colors.primary}>
               Contact Us
             </Typography>
-            <Typography variant="body1" color="text.secondary" mt={2}>
+            <Typography variant="body1" color={colors.text} mt={2}>
               Expand your business horizons with Avinya's unparalleled expertise! Contact us now to embark on your journey to success in the Indian market.
             </Typography>
           </Box>
@@ -18,11 +23,11 @@ const Contact = () => {
           <Grid container spacing={2}>
             {/* Address */}
             <Grid item xs={12} md={6}>
-              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150 }}>
-                <Typography variant="h6" fontWeight="bold" color="text.primary" gutterBottom>
+              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150, bgcolor: colors.background }}>
+                <Typography variant="h6" fontWeight="bold" color={colors.primary} gutterBottom>
                   Our Address
                 </Typography>
-                <Typography variant="body1" color="text.secondary">
+                <Typography variant="body1" color={colors.text}>
                   Avinya, Westgate, 4, SG Hwy Service Rd, Ahmedabad, Gujarat, 380015
                 </Typography>
               </Paper>
@@ -30,12 +35,12 @@ const Contact = () => {
 
             {/* Email */}
             <Grid item xs={12} md={3}>
-              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150 }}>
-                <Typography variant="h6" fontWeight="bold" color="text.primary" gutterBottom>
+              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150, bgcolor: colors.background }}>
+                <Typography variant="h6" fontWeight="bold" color={colors.primary} gutterBottom>
                   Email Us
                 </Typography>
-                <Typography variant="body1" color="text.secondary">
-                  <Link href="mailto:contact@avinya.co.in" color="primary" underline="hover">
+                <Typography variant="body1" color={colors.text}>
+                  <Link href="mailto:contact@avinya.co.in" color={colors.text} underline="hover">
                     contact@avinya.co.in
                   </Link>
                 </Typography>
@@ -44,11 +49,11 @@ const Contact = () => {
 
             {/* Phone */}
             <Grid item xs={12} md={3}>
-              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150 }}>
-                <Typography variant="h6" fontWeight="bold" color="text.primary" gutterBottom>
+              <Paper elevation={3} sx={{ p: 4, borderRadius: 2, minHeight: 150, bgcolor: colors.background }}>
+                <Typography variant="h6" fontWeight="bold" color={colors.primary} gutterBottom>
                   Call Us
                 </Typography>
-                <Typography variant="body1" color="text.secondary">
+                <Typography variant="body1" color={colors.text}>
                   +91 8980038802
                 </Typography>
               </Paper>

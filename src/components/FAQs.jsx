@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Box, Container, Typography, List, ListItem, Collapse, IconButton, Paper } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { ThemeContext } from './ThemeContext';
+import { themeColors } from './themeColors';
 
 const faqData = [
   {
@@ -51,6 +53,8 @@ const faqData = [
 
 
 const FAQs = () => {
+  const { mode } = useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -59,11 +63,11 @@ const FAQs = () => {
 
   return (
     <>
-      <Box id="faq" sx={{ bgcolor: 'white', display: 'flex', alignItems: 'center'}}>
+      <Box id="faq" sx={{ bgcolor: colors.background, display: 'flex', alignItems: 'center'}}>
         <Container maxWidth="lg">
           {/* Heading */}
           <Box textAlign="center" mb={8}>
-            <Typography variant="h4" fontWeight="bold" color="text.primary">
+            <Typography variant="h4" fontWeight="bold" color={colors.primary}>
               FAQs
             </Typography>
           </Box>
@@ -77,22 +81,23 @@ const FAQs = () => {
                   sx={{ 
                     display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
                     cursor: 'pointer', py: 3, px: 4, 
-                    transition: 'border 0.3s', border: '1px solid transparent', 
+                    transition: 'border 0.3s', border: '1px solid transparent',
+                    bgcolor:colors.cardColor, 
                     '&:hover': { borderColor: 'primary.main' }, borderRadius: 2
                   }}
                   onClick={() => toggleFAQ(index)}
                 >
-                  <Typography color="text.primary" style = {{fontSize:'15px'}}>
+                  <Typography color={colors.text} style = {{fontSize:'15px'}}>
                     {item.question}
                   </Typography>
                   <IconButton>
-                    <ExpandMoreIcon sx={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                    <ExpandMoreIcon sx={{ transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s', color:colors.primary }} />
                   </IconButton>
                 </Paper>
 
                 <Collapse in={activeIndex === index}>
                   <Box p={4} mt={-1}>
-                    <Typography color="text.secondary" style = {{fontSize:'13px'}}>
+                    <Typography color={colors.text} style = {{fontSize:'13px'}}>
                       {item.answer}
                     </Typography>
                   </Box>

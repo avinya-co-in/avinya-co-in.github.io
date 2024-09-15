@@ -1,30 +1,35 @@
 import { Box, Container, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { useContext } from 'react';
+import { themeColors } from './themeColors';
+import { ThemeContext } from './ThemeContext';
 const About = () => {
+  const { mode } = useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   return (
     <>
-      <Box id="about" sx={{ bgcolor: 'white', py: 8 }} mt={{xs:5, lg:0}} >
+      <Box id="about" sx={{ bgcolor: colors.background, py: 8 }}>
         <Container maxWidth="lg">
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
-            <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt = {{xs : 5, md : 0, lg: 0}}>
-              <Typography variant="h4" fontWeight="bold" color="primary.main" mb={3}>
+            <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt={{ xs: 5, md: 0, lg: 0 }}>
+              <Typography variant="h4" fontWeight="bold" color={colors.primary} mb={3}>
                 About Avinya
               </Typography>
-              <Typography variant="h6" fontWeight="600" mb={2}>
+              <Typography variant="h6" fontWeight="600" mb={2} color={colors.heading}>
                 Expand your horizons with Avinya - your trusted partner in conquering the vast potential of the Indian market
               </Typography>
-              <Typography variant="body1" mb={3}>
-                Avinya is dedicated to connecting global enterprises with the vibrant and dynamic Indian market.
-                Our team comprises seasoned professionals with deep expertise in marketing, consulting, and cross-cultural
-                communication. We are committed to ensuring your expansion into India is seamless and successful.
+              <Typography variant="body1" mb={3} color={colors.text}>
+                Avinya is dedicated to connecting global enterprises with the vibrant and dynamic Indian market. Our team comprises
+                seasoned professionals with deep expertise in marketing, consulting, and cross-cultural communication. We are
+                committed to ensuring your expansion into India is seamless and successful.
               </Typography>
               <List sx={{ mb: 3 }}>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}}  />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography ml={{xs: -4, lg: -4}}>
+                      <Typography ml={{ xs: -4, lg: -4 }} color={colors.text}>
                         <b>Proven Success:&nbsp;</b> Expertly guiding international companies into the Indian market.
                       </Typography>
                     }
@@ -32,11 +37,11 @@ const About = () => {
                 </ListItem>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}} />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography ml={{xs: -4, lg: -4}}>
+                      <Typography ml={{ xs: -4, lg: -4 }} color={colors.text}>
                         <b>In-Depth Knowledge:&nbsp;</b> Deep understanding of India's business landscape and culture.
                       </Typography>
                     }
@@ -44,18 +49,18 @@ const About = () => {
                 </ListItem>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
                   <ListItemIcon>
-                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{xs: 5, lg: 0}} />
+                    <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      <Typography ml={{xs: -4, lg: -4}}>
+                      <Typography ml={{ xs: -4, lg: -4 }} color={colors.text}>
                         <b>Tailored Solutions:&nbsp;</b> Customized strategies to meet your unique business needs.
                       </Typography>
                     }
                   />
                 </ListItem>
               </List>
-              <Typography variant="body1" fontStyle="italic">
+              <Typography variant="body1" fontStyle="italic" color={colors.text}>
                 Join forces with Avinya for a successful and prosperous venture into India.
               </Typography>
             </Box>
@@ -64,12 +69,16 @@ const About = () => {
                 component="img"
                 src="/logo.png"
                 sx={{ width: '100%', height: '100%' }}
+                style={{
+                  filter: mode === 'dark' ? 'invert(1)' : 'invert(0)',
+                }}
                 alt="Avinya Logo"
               />
             </Box>
           </Box>
         </Container>
       </Box>
+
       {/* <section id="about" className="about">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">

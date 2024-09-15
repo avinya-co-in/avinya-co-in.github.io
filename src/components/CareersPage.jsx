@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
 import { WhatsApp } from '@mui/icons-material';
+import { ThemeContext } from './ThemeContext';
+import { themeColors } from './themeColors';
 
 const jobOpenings = [
   {
@@ -31,14 +33,16 @@ const jobOpenings = [
 ];
 
 export default function CareersPage() {
+  const { mode } = useContext(ThemeContext);  // Use mode from ThemeContext
+  const colors = themeColors[mode];  // Get colors based on the current mode
   return (
-    <Box id="career" sx={{ my: 4, scrollMarginTop: '100px' }}> {/* Adjust scroll position */}
+    <Box id="career" sx={{ bgcolor: colors.background, scrollMarginTop: '100px', py: 12 }}> {/* Adjust scroll position */}
         <Container maxWidth="lg">
         <Box textAlign="center" mb={8}>
-        <Typography variant="h4" fontWeight="bold" color="text.primary">
+        <Typography variant="h4" fontWeight="bold" color={colors.primary}>
                 Careers at Our Company
             </Typography>
-            <Typography variant="body1" color="text.secondary" mt={2}>
+            <Typography variant="body1" color={colors.text} mt={2}>
                 We are always looking for talented individuals to join our team. Below are the current job openings:
             </Typography>
         </Box>
@@ -47,20 +51,21 @@ export default function CareersPage() {
         <Grid container spacing={4}>
             {jobOpenings.map((job, index) => (
             <Grid item xs={12} md={4} key={index}>
-                <Card style={{ height: 250 }}>
+                <Card sx={{ height: 300, bgcolor: colors.background,  transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary } }}>
                     <CardContent>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography variant="h5" color={colors.text} gutterBottom>
                         {job.title}
                         </Typography>
-                        <Typography variant="subtitle1" gutterBottom>
+                        <Typography variant="subtitle1" color={colors.text} gutterBottom>
                         Job: {job.Job}
                         </Typography>
-                        <Typography variant="body1" paragraph>
+                        <Typography variant="body1" color={colors.text} paragraph>
                         {job.description}
                         </Typography>
                         <Button
                         variant="contained"
-                        color="primary"
+                        background={colors.buttonBackground}
+                        color={colors.button}
                         href={`https://api.whatsapp.com/send/?phone=918980038802&text&type=phone_number&app_absent=0`}
                         target="_blank"
                         rel="noopener noreferrer"
