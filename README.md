@@ -10,3 +10,4 @@ Official avinya.co.in website Hosting
 |16/04/2024     |Porting to vite + React                                                                        |
 |14/08/2024     |Adding Google Project IDX nix config to the project and improving                              |
 |15/08/2024     |Solved Error in image showing                                                                  |
+|12/10/2024     |Added Login button for anvika.vercel.app                                                       |
