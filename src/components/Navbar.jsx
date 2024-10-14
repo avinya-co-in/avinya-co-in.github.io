@@ -20,9 +20,9 @@ const Navbar = () => {
             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#services">Services</a></li>
             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#contact">Contact</a></li>
             <li>
-              <a className="block" href="#contact">
+              <a className="block" href="https://anvika.vercel.app">
                 <div className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 w-max">
-                  Get Started
+                  Login
                 </div>
               </a>
             </li>
