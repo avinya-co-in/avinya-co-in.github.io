@@ -20,10 +20,10 @@ const Navbar = () => {
             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#services">Services</a></li>
             <li><a className="block py-2 text-gray-800 hover:text-blue-600 md:py-0" href="#contact">Contact</a></li>
             <li>
-              <a href="https://anvika.vercel.app" class="no-underline">
-                <button class="relative text-nowrap rounded-full bg-white font-semibold text-blue-600 transition-all duration-300 ease-in-out before:absolute before:inset-0 before:-z-10 before:rounded-md before:bg-gradient-to-r before:from-purple-500 before:via-pink-500 before:to-orange-500 before:opacity-75 before:blur-md before:transition-all before:duration-300 hover:before:opacity-100 hover:before:blur-xl">
-                  <div class="mx-4 my-2">Login to Anvika</div>
-                </button>
+              <a className="block" href="https://anvika.vercel.app">
+                <div className="bg-blue-600 text-white py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 w-max">
+                  Login
+                </div>
               </a>
             </li>
           </ul>
