@@ -1,6 +1,11 @@
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
+   environment.systemPackages = with pkgs; [
+    curl         # To use 'curl' for fetching public IP
+    wget         # To use 'wget' for fetching public IP
+    dnsutils     # To use 'dig' command (includes dig)
+  ];
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
 
@@ -11,6 +16,9 @@
     # pkgs.python311Packages.pip
     pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
+    pkgs.busybox
+    pkgs.bashInteractive # For Bash shell
+    pkgs.bash-completion # Bash auto-completion package
   ];
 
   # Sets environment variables in the workspace
@@ -18,7 +26,9 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      # "vscodevim.vim"
+      "ritwickdey.LiveServer"
+      "mhutchie.git-graph"
+      # "antfu.vite"
     ];
 
     # Enable previews
@@ -33,7 +43,7 @@
         #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
         #   # and show it in IDX's web preview panel
         #   command = ["npm" "run" "dev"];
-        #   manager = "web";
+        #   manager = "web";Ṅ
         #   env = {
         #     # Environment variables to set for your server
         #     PORT = "$PORT";
