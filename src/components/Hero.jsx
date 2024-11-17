@@ -25,7 +25,7 @@ function Hero() {
               </li>
             </ul>
             <div className="mt-6">
-              <a href="#contact" className="bg-blue-600 text-white text-lg py-3 px-5 rounded-full hover:bg-blue-700 transition-colors duration-200 ml-4">Get Started</a>
+              <a href="https://anvika.vercel.app/dashboard" className="bg-blue-600 text-white text-lg py-3 px-5 rounded-full hover:bg-blue-700 transition-colors duration-200 ml-4">Get Started</a>
             </div>
           </div>
           <div className="lg:w-1/2 mb-6 lg:mb-0">
