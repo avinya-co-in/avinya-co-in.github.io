@@ -82,7 +82,7 @@ function Hero() {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="#contact"
+                  href="https://anvika.vercel.app/dashboard"
                   sx={{
                     textTransform: 'none',
                     px: 5,
