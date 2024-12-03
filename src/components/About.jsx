@@ -15,15 +15,15 @@ const About = () => {
                 About Avinya
               </Typography>
               <Typography variant="h6" fontWeight="600" mb={2} color={colors.heading}>
-                Expand your horizons with Avinya - your trusted partner in conquering the vast potential of the Indian market
+                Expand your horizons with Avinya - expand your business to the World-Market
               </Typography>
-              <Typography variant="body1" mb={3} color={colors.text}>
+              <Typography variant="body1" mb={1} color={colors.text}>
                 Avinya is dedicated to connecting global enterprises with the vibrant and dynamic Indian market. Our team comprises
                 seasoned professionals with deep expertise in marketing, consulting, and cross-cultural communication. We are
                 committed to ensuring your expansion into India is seamless and successful.
               </Typography>
-              <List sx={{ mb: 3 }}>
-                <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
+              <List sx={{ mb: 1 }}>
+                <ListItem sx={{ display: 'flex', alignItems: 'center' }} style={{padding: '0px 16px'}}>
                   <ListItemIcon>
                     <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>
@@ -35,7 +35,7 @@ const About = () => {
                     }
                   />
                 </ListItem>
-                <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
+                <ListItem sx={{ display: 'flex', alignItems: 'center' }} style={{padding: '0px 16px'}}>
                   <ListItemIcon>
                     <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>
@@ -47,7 +47,7 @@ const About = () => {
                     }
                   />
                 </ListItem>
-                <ListItem sx={{ display: 'flex', alignItems: 'center' }}>
+                <ListItem sx={{ display: 'flex', alignItems: 'center' }} style={{padding: '0px 16px'}}>
                   <ListItemIcon>
                     <Box component="img" src="/assets/icon/tick.svg" sx={{ width: 16, height: 16 }} mb={{ xs: 5, lg: 0 }} />
                   </ListItemIcon>

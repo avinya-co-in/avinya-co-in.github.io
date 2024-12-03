@@ -6,24 +6,29 @@ import { themeColors } from './themeColors';
 
 const jobOpenings = [
   {
-    title: "Backend Developer",
+    title: "Business Development Executive",
     Job: "Hybrid",
-    description: "We're looking for a skilled software engineer to join our team. Experience with React and Node.js is preferred."
+    description: "Seeking a proactive Business Development Executive to drive partnerships and expand market reach. Strong communication and negotiation skills are a must."
   },
   {
-    title: "Full Stack Engineer",
+    title: "Sales Executive",
     Job: "Hybrid",
-    description: "We're looking for a skilled software engineer to join our team. Experience with React and Node.js is preferred."
-  },
-  {
-    title: "Frontend Developer",
-    Job: "Hybrid",
-    description: "We're looking for a skilled software engineer to join our team. Experience with React and Node.js is preferred."
+    description: "We are looking for a Sales Executive to identify leads, close deals, and manage client relationships effectively."
   },
   {
     title: "Product Manager",
     Job: "Onsite",
     description: "We need a product manager with experience in agile development and leading cross-functional teams."
+  },
+  {
+    title: "Backend Developer",
+    Job: "Hybrid",
+    description: "We're looking for a skilled backend developer to join our team. Experience with Node.js and database management is preferred."
+  },
+  {
+    title: "Frontend Developer",
+    Job: "Hybrid",
+    description: "We're looking for a frontend developer with a strong command of React and an eye for detail in user interfaces."
   },
   {
     title: "UI/UX Designer",

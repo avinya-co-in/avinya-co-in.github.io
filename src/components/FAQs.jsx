@@ -87,7 +87,7 @@ const FAQs = () => {
                   }}
                   onClick={() => toggleFAQ(index)}
                 >
-                  <Typography color={colors.text} style = {{fontSize:'15px'}}>
+                  <Typography color={colors.text} style = {{fontSize:'17px'}}>
                     {item.question}
                   </Typography>
                   <IconButton>
@@ -97,7 +97,7 @@ const FAQs = () => {
 
                 <Collapse in={activeIndex === index}>
                   <Box p={4} mt={-1}>
-                    <Typography color={colors.text} style = {{fontSize:'13px'}}>
+                    <Typography color={colors.text} style = {{fontSize:'15px'}}>
                       {item.answer}
                     </Typography>
                   </Box>
@@ -108,36 +108,6 @@ const FAQs = () => {
         </Container>
       </Box>
     </>
-    // <section id="faq" className="bg-white flex items-center">
-    //   <div className="container mx-auto px-4">
-    //     <div className="text-center mb-8">
-    //       <h2 className="text-3xl font-bold text-gray-900">FAQs</h2>
-    //     </div>
-
-    //     <ul className="space-y-4">
-    //       {faqData.map((item, index) => (
-    //         <li key={index}>
-    //           <div
-    //             className="flex justify-between items-center cursor-pointer py-4 px-6 border hover:border-blue-700 rounded-lg shadow-md"
-    //             onClick={() => toggleFAQ(index)}
-    //           >
-    //             <span className="text-lg sm:text-2xl text-gray-800">{item.question}</span>
-    //             <i className={`text-gray-600 transform transition-transform duration-200 ${activeIndex === index ? 'rotate-180' : ''}`}>
-    //               <svg className="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    //                 <path d="M12 14.121l-5.657-5.657 1.414-1.414 4.243 4.243 4.243-4.243 1.414 1.414z" />
-    //               </svg>
-    //             </i>
-    //           </div>
-    //           {activeIndex === index && (
-    //             <div className="p-6 text-gray-700 text-base sm:text-xl">
-    //               {item.answer}
-    //             </div>
-    //           )}
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </div>
-    // </section>
   );
 };
 
