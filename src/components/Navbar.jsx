@@ -158,7 +158,7 @@ function Navbar() {
           }}
         >
           <a href="index.html" className="flex items-center">
-            <img src="/logo.png" alt="Avinya" className="h-12 w-auto"
+            <img src="/avinya-logo.png" alt="Avinya" className="h-12 w-auto"
               style={{
                 filter: mode === 'dark' ? 'invert(1)' : 'invert(0)', // Apply filter based on mode
               }}
