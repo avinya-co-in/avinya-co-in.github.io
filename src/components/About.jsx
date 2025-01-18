@@ -67,7 +67,7 @@ const About = () => {
             <Box sx={{ flex: 1, mt: { xs: 4, md: 0 }, textAlign: { xs: 'center', md: 'left' } }}>
               <Box
                 component="img"
-                src="/logo.png"
+                src="/avinya-logo.png"
                 sx={{ width: '100%', height: '100%' }}
                 style={{
                   filter: mode === 'dark' ? 'invert(1)' : 'invert(0)',
