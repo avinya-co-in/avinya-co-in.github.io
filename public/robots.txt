@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avinya.co.in/sitemap.xml

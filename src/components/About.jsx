@@ -7,7 +7,7 @@ const About = () => {
   const colors = themeColors[mode];  // Get colors based on the current mode
   return (
     <>
-      <Box id="about" sx={{ bgcolor: colors.background, py: 8 }}>
+      <Box id="about" sx={{ bgcolor: colors.background, py: 12 }}>
         <Container maxWidth="lg">
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
             <Box sx={{ flex: 3, textAlign: { xs: 'center', md: 'left' } }} mt={{ xs: 5, md: 0, lg: 0 }}>
@@ -15,12 +15,13 @@ const About = () => {
                 About Avinya
               </Typography>
               <Typography variant="h6" fontWeight="600" mb={2} color={colors.heading}>
-                Expand your horizons with Avinya - expand your business to the World-Market
+                Expand your horizons with Avinya - Your trusted partner for import-export data and global market intelligence
               </Typography>
               <Typography variant="body1" mb={1} color={colors.text}>
-                Avinya is dedicated to connecting global enterprises with the vibrant and dynamic Indian market. Our team comprises
-                seasoned professionals with deep expertise in marketing, consulting, and cross-cultural communication. We are
-                committed to ensuring your expansion into India is seamless and successful.
+                Avinya is dedicated to connecting global enterprises with verified trade data and market intelligence. Our team comprises
+                seasoned professionals with deep expertise in import-export data analytics, B2B lead generation, marketing, consulting, 
+                and cross-cultural communication. We provide comprehensive trade intelligence including customs data, shipment records, 
+                and verified contact details to help businesses make informed decisions and expand globally.
               </Typography>
               <List sx={{ mb: 1 }}>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }} style={{padding: '0px 16px'}}>

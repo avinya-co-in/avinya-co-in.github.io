@@ -1,8 +1,8 @@
-import { Box, Button, Container, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Paper, Stack, Typography } from "@mui/material";
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import LanguageIcon from '@mui/icons-material/Language';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import FitbitIcon from '@mui/icons-material/Fitbit';
+import DatasetIcon from '@mui/icons-material/Dataset';
 import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { themeColors } from "./themeColors";
@@ -35,7 +35,25 @@ const Services = () => {
             {/* Services Grid */}
             <Grid item xs={12} xl={7}>
               <Grid container spacing={4}>
-                {/* Service 1 */}
+                {/* Service 1 - Import Export Data */}
+                <Grid item xs={12} md={6}>
+                  <Paper 
+                    elevation={3}
+                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
+                  >
+                    <Stack direction="row" spacing={1} justifyContent="center">
+                      <DatasetIcon sx={{ color: colors.primary }} />
+                      <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
+                        Import-Export Data
+                      </Typography>
+                    </Stack>
+                    <Typography variant="body1" color={colors.text} mt={2}>
+                      Access verified trade data, customs records, and B2B contact details from any industry worldwide. Get 5 free samples!
+                    </Typography>
+                  </Paper>
+                </Grid>
+
+                {/* Service 2 */}
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
@@ -53,7 +71,7 @@ const Services = () => {
                   </Paper>
                 </Grid>
 
-                {/* Service 2 */}
+                {/* Service 3 */}
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
@@ -71,23 +89,6 @@ const Services = () => {
                   </Paper>
                 </Grid>
 
-                {/* Service 3 */}
-                <Grid item xs={12} md={6}>
-                  <Paper 
-                    elevation={3}
-                    sx={{ p: 4, borderRadius: 2, textAlign: 'center', transition: 'border 0.3s', border: '1px solid transparent', '&:hover': { borderColor: colors.primary }, height:'250px', bgcolor:colors.cardColor }}
-                  >
-                    <Stack direction="row" spacing={1} justifyContent="center">
-                      <FitbitIcon sx={{ color: colors.primary }} />
-                      <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
-                        Branding Solutions
-                      </Typography>
-                    </Stack>
-                    <Typography variant="body1" color={colors.text} mt={2}>
-                      We craft a compelling brand identity that resonates with the Indian audience, setting the stage for long-term success.
-                    </Typography>
-                  </Paper>
-                </Grid>
 
                 {/* Service 4 */}
                 <Grid item xs={12} md={6}>
