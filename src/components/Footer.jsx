@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Typography, Link, Grid, Container } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';

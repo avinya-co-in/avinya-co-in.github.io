@@ -1,4 +1,4 @@
-import { Box, Container, Grid, ListItemIcon, Paper, Typography } from '@mui/material';
+import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from './ThemeContext';
 import { themeColors } from './themeColors';
