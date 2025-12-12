@@ -15,13 +15,13 @@ const About = () => {
                 About Avinya
               </Typography>
               <Typography variant="h6" fontWeight="600" mb={2} color={colors.heading}>
-                Expand your horizons with Avinya - Your trusted partner for import-export data and global market intelligence
+                Expand your horizons with Avinya - Your trusted partner for finding and verifying Indian suppliers
               </Typography>
               <Typography variant="body1" mb={1} color={colors.text}>
-                Avinya is dedicated to connecting global enterprises with verified trade data and market intelligence. Our team comprises
-                seasoned professionals with deep expertise in import-export data analytics, B2B lead generation, marketing, consulting, 
-                and cross-cultural communication. We provide comprehensive trade intelligence including customs data, shipment records, 
-                and verified contact details to help businesses make informed decisions and expand globally.
+                Avinya is dedicated to connecting global enterprises with verified Indian suppliers and providing comprehensive supplier 
+                verification services - completely free of charge. Our team comprises seasoned professionals with deep expertise in supplier 
+                sourcing, verification, B2B lead generation, marketing, consulting, and cross-cultural communication. We help businesses 
+                find reliable Indian suppliers and verify their authenticity to ensure safe and successful business partnerships.
               </Typography>
               <List sx={{ mb: 1 }}>
                 <ListItem sx={{ display: 'flex', alignItems: 'center' }} style={{padding: '0px 16px'}}>

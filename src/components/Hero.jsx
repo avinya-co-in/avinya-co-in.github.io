@@ -1,5 +1,4 @@
 import {Box, Button, Container, List, ListItem, ListItemIcon, ListItemText, Typography, Stack} from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import './Hero.css';
 import {ThemeContext} from './ThemeContext';
@@ -35,13 +34,13 @@ function Hero() {
               }}
             >
               <Typography variant="h2" component="h1" fontWeight="bold" color={colors.heading} sx={{fontSize: {xs: '2rem', md: '2.5rem', lg: '3rem'}}}>
-                Unlock Global Trade Intelligence with <span style={{color: colors.primary}}>Avinya</span>
+                Find & Verify Indian Suppliers with <span style={{color: colors.primary}}>Avinya</span>
               </Typography>
               <Typography variant="h5" component="h2" mt={2} color={colors.text} sx={{fontSize: {xs: '1.1rem', md: '1.3rem', lg: '1.5rem'}, lineHeight: 1.4}}>
-                Access verified import-export data, customs records, and B2B contact details from any industry worldwide
+                Get verified supplier information and discover the best Indian suppliers for your business - completely free!
               </Typography>
 
-              {/* <Box
+              <Box
                 sx={{
                   mt: 3,
                   p: 2.5,
@@ -51,12 +50,12 @@ function Hero() {
                 }}
               >
                 <Typography variant="body1" fontWeight="600" color={colors.heading} mb={1}>
-                  🎁 Special Offer: Get 5 FREE Sample Data Records!
+                  🎁 100% Free Service - No Limits!
                 </Typography>
                 <Typography variant="body2" color={colors.text}>
-                  Email us your requirements and receive high-quality verified trade data samples instantly
+                  Submit your query and get info within 24 hours - absolutely free
                 </Typography>
-              </Box> */}
+              </Box>
 
               <List sx={{mt: 3}}>
                 <ListItem sx={{display: 'flex', py: 0.5}}>
@@ -66,7 +65,7 @@ function Hero() {
                   <ListItemText
                     primary={
                       <Typography ml={{xs: -4, lg: -4}} color={colors.text} fontSize="1rem">
-                        <strong>Verified Import-Export Data</strong> from 100+ countries
+                        <strong>Find Best Indian Suppliers</strong> for any product or HS code
                       </Typography>
                     }
                   />
@@ -78,7 +77,7 @@ function Hero() {
                   <ListItemText
                     primary={
                       <Typography ml={{xs: -4, lg: -4}} color={colors.text} fontSize="1rem">
-                        <strong>Real-time Shipment Records</strong> and customs declarations
+                        <strong>Verify Supplier Authenticity</strong> and physical addresses
                       </Typography>
                     }
                   />
@@ -90,7 +89,7 @@ function Hero() {
                   <ListItemText
                     primary={
                       <Typography ml={{xs: -4, lg: -4}} color={colors.text} fontSize="1rem">
-                        <strong>Buyer & Supplier Contact Details</strong> with decision-maker info
+                        <strong>24-Hour Response Time</strong> for all queries
                       </Typography>
                     }
                   />
@@ -102,7 +101,7 @@ function Hero() {
                   <ListItemText
                     primary={
                       <Typography ml={{xs: -4, lg: -4}} color={colors.text} fontSize="1rem">
-                        <strong>Market Intelligence & Analytics</strong> for strategic decisions
+                        <strong>Completely Free Service</strong> with no hidden charges
                       </Typography>
                     }
                   />
@@ -119,8 +118,10 @@ function Hero() {
                   variant="contained"
                   color="primary"
                   size="large"
-                  href="mailto:data@avinya.co.in?subject=Request for Free Import-Export Data Sample&body=Hello Avinya Team,%0D%0A%0D%0AI would like to request 5 free sample data for the following industry:%0D%0A%0D%0A[Please specify your industry/product]%0D%0A%0D%0AThank you!"
-                  startIcon={<EmailIcon />}
+                  href="https://forms.gle/acUG3zBhicB327BcA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  endIcon={<OpenInNewIcon />}
                   sx={{
                     textTransform: 'none',
                     px: 4,
@@ -136,14 +137,14 @@ function Hero() {
                     },
                   }}
                 >
-                  Get Free Sample
+                  Find Supplier
                 </Button>
 
                 <Button
                   variant="outlined"
                   color="primary"
                   size="large"
-                  href="https://anvika.vercel.app/dashboard"
+                  href="https://forms.gle/ydhA6rwqsQDDig2D8"
                   target="_blank"
                   rel="noopener noreferrer"
                   endIcon={<OpenInNewIcon />}
@@ -163,12 +164,12 @@ function Hero() {
                     },
                   }}
                 >
-                  Anvika Dashboard
+                  Verify Supplier
                 </Button>
               </Stack>
 
               <Typography variant="caption" color={colors.text} display="block" mt={2} sx={{opacity: 0.8}}>
-                ✓ No credit card required  •  ✓ Instant access  •  ✓ 100% verified data
+                ✓ 100% Free Service  •  ✓ 24-Hour Response  •  ✓ No Limits
               </Typography>
             </Box>
             <Box flex={1} mt={{xs: 20, lg: 0}}>

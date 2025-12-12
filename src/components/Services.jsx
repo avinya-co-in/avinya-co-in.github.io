@@ -35,7 +35,7 @@ const Services = () => {
             {/* Services Grid */}
             <Grid item xs={12} xl={7}>
               <Grid container spacing={4}>
-                {/* Service 1 - Import Export Data */}
+                {/* Service 1 - Supplier Services */}
                 <Grid item xs={12} md={6}>
                   <Paper 
                     elevation={3}
@@ -44,11 +44,11 @@ const Services = () => {
                     <Stack direction="row" spacing={1} justifyContent="center">
                       <DatasetIcon sx={{ color: colors.primary }} />
                       <Typography variant="h6" sx={{ color: colors.primary }} fontWeight="600" style={{marginTop:'-4px'}}>
-                        Import-Export Data
+                        Supplier Services
                       </Typography>
                     </Stack>
                     <Typography variant="body1" color={colors.text} mt={2}>
-                      Access verified trade data, customs records, and B2B contact details from any industry worldwide. Get 5 free samples!
+                      Find the best Indian suppliers for your products and verify supplier authenticity - completely free with 24-hour response time!
                     </Typography>
                   </Paper>
                 </Grid>
